@@ -1,0 +1,6 @@
+1. (5 Points) How is this project structure different than a Flask (or Node) application? What role are the urls.py and views.py files responsible for?
+There is the system of using apps within django projects. I think django has a much better separation of concerns. the urls handle which views to display and the functions within the views will return the correct html file. 
+2. (5 Points) Why do we use 2 separate urls.py files? How do they interact?
+The projects urls.py file will redirect certain urls to the designated app and then from there the app will handle the urls assigned to it. The project urls.py is like the first filter that the given url goes through and then it is filtered again and handed off to the correct view file from the app's urls
+3. (5 Points) When is it desirable to split our code over multiple apps? Why would we want to do so?
+Each app is supposed to handle a section of the project. An app is a little broader than just a feature but with a complex project there should be several apps so the project is broken up into smaller modular pieces.
